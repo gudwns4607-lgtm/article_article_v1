@@ -31,19 +31,17 @@ To guarantee full scientific transparency and compliance with open-science repli
 
 ---
 
-## 💡 Methodological Note on Response Variables
+## 💡 Methodological Note on Target Risk Vectors
 
-To preserve strict mathematical boundaries and isolate structural endogeneity loops, the binary target vector is parameterized via two independent frameworks:
-* **MarketDown_C**: Parameterized as 1 if KOSPI Return (t) < 0 (Contemporaneous market contraction). This vector is utilized in **Table 3** and **Table 4 [C]**.
-* **MarketDown_P**: Parameterized as 1 if R (t+1) < 0 (Forward-looking next-day risk surge). This vector is utilized in **Table 4 [P]** and the **Table 6** placebo permutation test.
+To preserve strict econometric boundaries and prevent endogeneity loops, the empirical package parameterizes risk outcomes via two distinct target vectors:
+* **`MarketDown_C`** ($t$): Parameterized as $1$ if $\text{KOSPI Return}_t < 0$ (Contemporaneous market contraction). Utilized in **Table 3** & **Table 4 [C]**.
+* **`MarketDown_P`** ($t+1$): Parameterized as $1$ if $\text{KOSPI Return}_{t+1} < 0$ (Forward-looking next-day risk surge). Utilized in **Table 4 [P]** & **Table 6** (Placebo test).
 
-> **Strategic Econometric Design**: To mitigate severe multicollinearity and mechanical loop inference, the concurrent vector KOSPI Return is explicitly omitted from the set of predictors within the same-day conditional regression pipeline (**Table 4 [C]**).
+> ⚠️ **Econometric Design Feature**: To completely eliminate mechanical loop inference and severe multicollinearity, the concurrent vector $\text{KOSPI Return}_t$ is explicitly omitted from the set of predictors within the same-day conditional regression pipeline (**Table 4 [C]**).
 
 ---
 
-## 📬 Technical Correspondence & Repository Support
+## 📬 Support & Blind-Review Compliance
 
-For comprehensive empirical inquiries, secondary metadata requests, or validation support regarding this automated risk surveillance framework, please utilize the designated repository communication channels:
-
-* **Inquiries**: Please open an **Issue** or submit a **Pull Request** directly within this GitHub repository.
-* **Double-Blind Policy Compliance**: In strict adherence to the double-blind peer review guidelines of the target journal, all author names, institutional affiliations, direct email addresses, and specific funding acknowledgments are intentionally anonymized during the evaluation phase. Complete correspondence and metadata profiles will be restored upon editorial acceptance.
+* **Technical Inquiries**: Please open a GitHub **Issue** or submit a **Pull Request** directly within this anonymous repository for secondary metadata or verification support.
+* **Double-Blind Policy Compliance**: In strict adherence to the target journal's peer-review guidelines, all author profiles, institutional affiliations, and direct correspondence metadata are intentionally redacted during the evaluation phase. Complete repository ownership and com
